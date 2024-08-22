@@ -91,7 +91,31 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        
+        <p><img src="https://hackmd.io/_uploads/S1mfVM7sR.png" alt="image"><br>ref: <a target="_blank" rel="noopener" href="https://app.diagrams.net/?src=about#G1EIcK0RX_4ogRxG2y8ueIV74aG6yx72Ad#%7B%22pageId%22%3A%22C5RBs43oDa-KdzZeNtuy%22%7D">https://app.diagrams.net/?src=about#G1EIcK0RX_4ogRxG2y8ueIV74aG6yx72Ad#%7B%22pageId%22%3A%22C5RBs43oDa-KdzZeNtuy%22%7D</a></p>
+<h2 id="待辦事項"><a href="#待辦事項" class="headerlink" title="待辦事項"></a>待辦事項</h2><ul>
+<li><input disabled="" type="checkbox"> 切換為教學模式</li>
+<li><input disabled="" type="checkbox"> 供使用者自行創造小吉ＯＯ指令，並加入自動選單中</li>
+<li><input disabled="" type="checkbox"> 繪製成圖片</li>
+<li><input disabled="" type="checkbox"> 不可在省略了數量的情況下寫日期 fix</li>
+</ul>
+<h2 id="呼叫指令選單「我要領養小吉」"><a href="#呼叫指令選單「我要領養小吉」" class="headerlink" title="呼叫指令選單「我要領養小吉」"></a>呼叫指令選單「我要領養小吉」</h2><p>呼叫選單提示後，會顯示以下按鈕供使用者自動輸入文字：</p>
+<ol>
+<li><a href="#%E7%85%A7%E9%A1%A7%E4%B8%A6%E8%A8%98%E9%8C%84%E5%B0%8F%E5%90%89%E7%94%9F%E6%B4%BB">照顧並記錄小吉生活</a>:<code>呼叫小吉</code></li>
+<li><a href="#%E8%AB%8B%E5%B0%8F%E5%90%89%E5%B9%AB%E5%BF%99%E6%95%B4%E7%90%86%E6%AB%83%E5%AD%90">請小吉幫忙整理櫃子</a>:<code>小吉幫忙</code></li>
+<li><a href="#%E6%94%BE%E7%94%9F%E5%B0%8F%E5%90%89">放生小吉</a>: <code>放生小吉</code></li>
+<li>小吉的一生: 導至<a href="">說明網站</a></li>
+</ol>
+<h2 id="照顧並記錄小吉生活"><a href="#照顧並記錄小吉生活" class="headerlink" title="照顧並記錄小吉生活"></a>照顧並記錄小吉生活</h2><p>輸入<code>呼叫小吉</code>會出現自動選單，可以帶小吉去尿尿、大便、散步（跑跑）、喝水，摸摸小吉則會統整小吉目前為止的生活紀錄。</p>
+<h3 id="1-指令：「最近怎麼樣」或「摸摸」"><a href="#1-指令：「最近怎麼樣」或「摸摸」" class="headerlink" title="1. 指令：「最近怎麼樣」或「摸摸」"></a>1. 指令：「最近怎麼樣」或「摸摸」</h3><p>動作1：取得並統整生活紀錄，再繪製成圖片<br>回覆1：生活紀錄<br>回覆2：若生活紀錄尚為空，將回傳生活自動選單</p>
+<h3 id="2-指令：「小吉OO」"><a href="#2-指令：「小吉OO」" class="headerlink" title="2. 指令：「小吉ＯＯ」"></a>2. 指令：「小吉ＯＯ」</h3><p>預設的自動選單中有尿尿、大便、散步、喝水，其他的指令使用者也可以自行創造。<br>動作：將紀錄寫入firebase中<br>回覆：好了！</p>
+<h2 id="請小吉幫忙整理櫃子"><a href="#請小吉幫忙整理櫃子" class="headerlink" title="請小吉幫忙整理櫃子"></a>請小吉幫忙整理櫃子</h2><p>輸入<code>小吉幫忙</code>會出現自動選單，可以請小吉幫忙整理零食櫃(零食)或櫥櫃(日用品)，叫<code>小吉看看</code>則會統整小吉目前為止的零食櫃(零食)或櫥櫃(日用品)。</p>
+<h3 id="1-指令：「小吉看看零食櫃」或「小吉看看櫥櫃」"><a href="#1-指令：「小吉看看零食櫃」或「小吉看看櫥櫃」" class="headerlink" title="1. 指令：「小吉看看零食櫃」或「小吉看看櫥櫃」"></a>1. 指令：「小吉看看零食櫃」或「小吉看看櫥櫃」</h3><p>動作1：根據使用者指示「零食櫃」或「櫥櫃」，取得並統整櫃子紀錄，再繪製成圖片<br>回覆1：櫃子紀錄<br>回覆2：若櫃子尚為空，將回傳打開櫃子自動選單教學</p>
+<h3 id="2-指令：「打開零食櫃」或「打開櫥櫃」"><a href="#2-指令：「打開零食櫃」或「打開櫥櫃」" class="headerlink" title="2. 指令：「打開零食櫃」或「打開櫥櫃」"></a>2. 指令：「打開零食櫃」或「打開櫥櫃」</h3><p>新增零食櫃或櫥櫃裡的東西，輸入模式是以<code>空行</code>新增物品。若未輸入有效期限則預設七天後過期；若未輸入數量則預設為1個；不可在省略了數量的情況下寫日期。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"># 物品 數量 日期</span><br><span class="line"># 物品 數量 (可省略日期)</span><br><span class="line"># 物品 (可省略數量) (可省略日期)</span><br><span class="line"></span><br><span class="line">打開零食櫃</span><br><span class="line">小吉飼料 1 2024/08/31</span><br><span class="line">小吉潔牙骨 2</span><br><span class="line">小吉餅乾</span><br></pre></td></tr></table></figure>
+<p>動作：將紀錄寫入firebase中<br>回覆：好了！</p>
+<h3 id="3-指令：「清空所有零食櫃」或「清空所有櫥櫃」"><a href="#3-指令：「清空所有零食櫃」或「清空所有櫥櫃」" class="headerlink" title="3. 指令：「清空所有零食櫃」或「清空所有櫥櫃」"></a>3. 指令：「清空所有零食櫃」或「清空所有櫥櫃」</h3><p>動作：根據使用者指示「零食櫃」或「櫥櫃」，清除在firebase上的所有資料。<br>回覆：好了！</p>
+<h3 id="4-指令：「清空過期零食櫃」或「清空過期櫥櫃」"><a href="#4-指令：「清空過期零食櫃」或「清空過期櫥櫃」" class="headerlink" title="4. 指令：「清空過期零食櫃」或「清空過期櫥櫃」"></a>4. 指令：「清空過期零食櫃」或「清空過期櫥櫃」</h3><p>動作：根據使用者指示「零食櫃」或「櫥櫃」，清除在firebase上的過期資料，即有效期限在今天以前的資料。<br>回覆：好了！</p>
+<h2 id="放生小吉"><a href="#放生小吉" class="headerlink" title="放生小吉"></a>放生小吉</h2><h2 id="輸入放生小吉會出現自動選單，確認是否要放生小吉。確認放生小吉後會清空所有零食櫃、櫥櫃，以及小吉的所有生活紀錄。-1-選項：放生牠動作：清除使用者在firebase上的所有資料。回覆：這個世界上又多了一隻流浪小吉…-2-選項：帶回家動作：無回覆：小吉還是會永遠愛你"><a href="#輸入放生小吉會出現自動選單，確認是否要放生小吉。確認放生小吉後會清空所有零食櫃、櫥櫃，以及小吉的所有生活紀錄。-1-選項：放生牠動作：清除使用者在firebase上的所有資料。回覆：這個世界上又多了一隻流浪小吉…-2-選項：帶回家動作：無回覆：小吉還是會永遠愛你" class="headerlink" title="輸入放生小吉會出現自動選單，確認是否要放生小吉。確認放生小吉後會清空所有零食櫃、櫥櫃，以及小吉的所有生活紀錄。### 1. 選項：放生牠動作：清除使用者在firebase上的所有資料。回覆：這個世界上又多了一隻流浪小吉…### 2. 選項：帶回家動作：無回覆：小吉還是會永遠愛你&lt;3"></a>輸入<code>放生小吉</code>會出現自動選單，確認是否要放生小吉。確認放生小吉後會清空所有零食櫃、櫥櫃，以及小吉的所有生活紀錄。<br>### 1. 選項：放生牠<br>動作：清除使用者在firebase上的所有資料。<br>回覆：這個世界上又多了一隻流浪小吉…<br>### 2. 選項：帶回家<br>動作：無<br>回覆：小吉還是會永遠愛你&lt;3</h2>
       
     </div>
     <footer class="article-footer">
