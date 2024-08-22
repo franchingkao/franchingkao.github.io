@@ -91,7 +91,7 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <p>動機：## 前言<br>自己有很多想記錄整理的事情，像是追蹤自己的健康狀況，而有些事情像是喝水或上廁所，智慧手錶是不會幫忙記錄的（何況我也不喜歡戴手錶）。所以才想到用line chatbot幫忙我隨時記錄，畢竟手機隨時在身上～另外還有家裡時不時會有過期的零食，也想藉由這次機會做一個可以幫忙統整家裡物品的chatbot。最後，最大的動機其實是想要嘗試看看<a target="_blank" rel="noopener" href="https://cloud.google.com/free/?utm_source=google&utm_medium=cpc&utm_campaign=japac-TW-all-zh-dr-BKWS-all-core-trial-EXA-dr-1605216&utm_content=text-ad-none-none-DEV_c-CRE_644095273672-ADGP_Hybrid+%7C+BKWS+-+EXA+%7C+Txt+-GCP-General-core+brand-main-KWID_43700074766895895-kwd-6458750523&userloc_9198904-network_g&utm_term=KW_google+cloud&gad_source=1&gclid=CjwKCAjwoJa2BhBPEiwA0l0ImBon8DzGgFqpKVmTFRKI3odZB1Mo0FXQZJZw7V8A-Vq0emfIlcyAKhoC0P8QAvD_BwE&gclsrc=aw.ds&hl=zh_tw">Google Cloud</a>的功能，本次實作使用到了<a target="_blank" rel="noopener" href="https://cloud.google.com/functions?hl=zh_tw">Cloud Function和Firebases</a>和<a target="_blank" rel="noopener" href="https://firebase.google.com/">Firebase</a>的Realtime database進行API串接。因為兩年前也有嘗試做一個Line chatbot，現在的感想是GCP提供了非常便利的平台開發，讚讚！本篇還不會有任何技術說明，只有操作說明。</p>
+        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>動機：自己有很多想記錄整理的事情，像是追蹤自己的健康狀況，而有些事情像是喝水或上廁所，智慧手錶是不會幫忙記錄的（何況我也不戴手錶）。所以才想到用line chatbot幫忙我隨時記錄，畢竟手機隨時在身上～另外還有家裡時不時會有過期的零食，也想藉由這次機會做一個可以幫忙統整家裡物品的chatbot。最後，最大的動機其實是想要嘗試看看<a target="_blank" rel="noopener" href="https://cloud.google.com/free/?utm_source=google&utm_medium=cpc&utm_campaign=japac-TW-all-zh-dr-BKWS-all-core-trial-EXA-dr-1605216&utm_content=text-ad-none-none-DEV_c-CRE_644095273672-ADGP_Hybrid+%7C+BKWS+-+EXA+%7C+Txt+-GCP-General-core+brand-main-KWID_43700074766895895-kwd-6458750523&userloc_9198904-network_g&utm_term=KW_google+cloud&gad_source=1&gclid=CjwKCAjwoJa2BhBPEiwA0l0ImBon8DzGgFqpKVmTFRKI3odZB1Mo0FXQZJZw7V8A-Vq0emfIlcyAKhoC0P8QAvD_BwE&gclsrc=aw.ds&hl=zh_tw">Google Cloud</a>的功能，本次實作使用到了<a target="_blank" rel="noopener" href="https://cloud.google.com/functions?hl=zh_tw">Cloud Functions</a>和<a target="_blank" rel="noopener" href="https://firebase.google.com/">Firebase</a>的Realtime database進行API串接。因為兩年前也有嘗試做一個Line chatbot，現在的感想是GCP提供了非常便利的平台開發，讚讚！</p>
 <ul>
 <li>目前功能：<ul>
 <li>記錄生活</li>
@@ -117,7 +117,7 @@
 <li><a href="#%E7%85%A7%E9%A1%A7%E4%B8%A6%E8%A8%98%E9%8C%84%E5%B0%8F%E5%90%89%E7%94%9F%E6%B4%BB">照顧小吉的同時記錄牠的生活</a>:<code>呼叫小吉</code></li>
 <li><a href="#%E8%AB%8B%E5%B0%8F%E5%90%89%E5%B9%AB%E5%BF%99%E6%95%B4%E7%90%86%E6%AB%83%E5%AD%90">叫小吉幫忙整理零食櫃和櫥櫃</a>:<code>小吉幫忙</code></li>
 <li><a href="#%E6%94%BE%E7%94%9F%E5%B0%8F%E5%90%89">再次放生小吉</a>: <code>放生小吉</code></li>
-<li>一探究竟小吉的一生: 導至<a href="">說明網站</a></li>
+<li>一探究竟小吉的一生: 導至<a target="_blank" rel="noopener" href="https://franchingkao.github.io/2024/08/21/chatbot-chiwa/">說明網站</a></li>
 </ol>
 <p><img src="https://hackmd.io/_uploads/HypB6BNi0.png" alt="image"></p>
 <h2 id="照顧並記錄小吉生活"><a href="#照顧並記錄小吉生活" class="headerlink" title="照顧並記錄小吉生活"></a>照顧並記錄小吉生活</h2><p>輸入<code>呼叫小吉</code>會出現自動選單，可以帶小吉去尿尿、大便、散步（跑跑）、喝水，摸摸小吉則會統整小吉目前為止的生活紀錄。</p>
