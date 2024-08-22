@@ -170,8 +170,8 @@
 </tbody></table>
 </li>
 </ul>
-<h3 id="2-指令：「打開零食櫃」或「打開櫥櫃」"><a href="#2-指令：「打開零食櫃」或「打開櫥櫃」" class="headerlink" title="2. 指令：「打開零食櫃」或「打開櫥櫃」"></a>2. 指令：「打開零食櫃」或「打開櫥櫃」</h3><p>新增零食櫃或櫥櫃裡的東西，輸入模式是以<code>空行</code>新增多個物品。若未輸入有效期限則預設七天後過期；若未輸入數量則預設為1個；不可在省略了數量的情況下寫日期。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"># 物品 數量 日期</span><br><span class="line"># 物品 數量 (可省略日期)</span><br><span class="line"># 物品 (可省略數量) (可省略日期)</span><br><span class="line"></span><br><span class="line">打開零食櫃</span><br><span class="line">小吉飼料 1 2024/08/31</span><br><span class="line">小吉潔牙骨 2</span><br><span class="line">小吉餅乾</span><br></pre></td></tr></table></figure>
+<h3 id="2-指令：「打開零食櫃」或「打開櫥櫃」"><a href="#2-指令：「打開零食櫃」或「打開櫥櫃」" class="headerlink" title="2. 指令：「打開零食櫃」或「打開櫥櫃」"></a>2. 指令：「打開零食櫃」或「打開櫥櫃」</h3><p>新增零食櫃或櫥櫃裡的東西，輸入模式是以<code>空行</code>新增多個物品。若未輸入，則有效期限則預設七天後過期；若未輸入，數量則預設為1個。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"># 物品 數量 日期</span><br><span class="line"># 物品 數量 (可省略日期)</span><br><span class="line"># 物品 (可省略數量) 日期</span><br><span class="line"># 物品 (可省略數量) (可省略日期)</span><br><span class="line"></span><br><span class="line">打開零食櫃</span><br><span class="line">小吉飼料 1 2024/08/31</span><br><span class="line">小吉潔牙骨 2</span><br><span class="line">小吉餅乾 2024/08/31</span><br><span class="line">小吉餅乾</span><br></pre></td></tr></table></figure>
 <ul>
 <li>動作：將紀錄寫入firebase中<ul>
 <li>回覆：好了！</li>
