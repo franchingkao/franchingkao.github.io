@@ -31,15 +31,16 @@
 <meta property="og:image" content="https://hackmd.io/_uploads/rkJxpHVjR.png">
 <meta property="og:image" content="https://hackmd.io/_uploads/HypB6BNi0.png">
 <meta property="og:image" content="https://hackmd.io/_uploads/r1IGAr4jA.png">
-<meta property="og:image" content="https://hackmd.io/_uploads/SJetAB4jC.png">
+<meta property="og:image" content="https://hackmd.io/_uploads/BJ3dA3SjA.png">
 <meta property="og:image" content="https://hackmd.io/_uploads/Sk5j0r4j0.png">
-<meta property="og:image" content="https://hackmd.io/_uploads/r17p1IVsA.png">
-<meta property="og:image" content="https://hackmd.io/_uploads/BJBUz8VoA.png">
+<meta property="og:image" content="https://hackmd.io/_uploads/rk1p02BoA.png">
+<meta property="og:image" content="https://hackmd.io/_uploads/S1d0C3Hj0.png">
 <meta property="og:image" content="https://hackmd.io/_uploads/B1FL1L4i0.png">
 <meta property="og:image" content="https://hackmd.io/_uploads/Hk_oW8EiA.png">
 <meta property="article:published_time" content="2024-08-21T07:55:09.000Z">
-<meta property="article:modified_time" content="2024-08-22T06:41:20.563Z">
+<meta property="article:modified_time" content="2024-08-23T07:52:01.835Z">
 <meta property="article:author" content="Frances Kao">
+<meta property="article:tag" content="chatbot">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://hackmd.io/_uploads/S1mfVM7sR.png">
 
@@ -191,7 +192,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">عُدل في</span>
-                <time title="عُدل: 2024-08-22 14:41:20" itemprop="dateModified" datetime="2024-08-22T14:41:20+08:00">2024-08-22</time>
+                <time title="عُدل: 2024-08-23 15:52:01" itemprop="dateModified" datetime="2024-08-23T15:52:01+08:00">2024-08-23</time>
               </span>
 
           
@@ -257,7 +258,7 @@
 </tr>
 </thead>
 <tbody><tr>
-<td><img src="https://hackmd.io/_uploads/SJetAB4jC.png" alt="image"></td>
+<td><img src="https://hackmd.io/_uploads/BJ3dA3SjA.png" alt="image"></td>
 <td><img src="https://hackmd.io/_uploads/Sk5j0r4j0.png" alt="image"></td>
 </tr>
 </tbody></table>
@@ -278,13 +279,13 @@
 </tr>
 </thead>
 <tbody><tr>
-<td><img src="https://hackmd.io/_uploads/r17p1IVsA.png" alt="image"> <img src="https://hackmd.io/_uploads/BJBUz8VoA.png" alt="image"></td>
+<td><img src="https://hackmd.io/_uploads/rk1p02BoA.png" alt="image"> <img src="https://hackmd.io/_uploads/S1d0C3Hj0.png" alt="image"></td>
 <td><img src="https://hackmd.io/_uploads/B1FL1L4i0.png" alt="image"></td>
 </tr>
 </tbody></table>
 </li>
 </ul>
-<h3 id="2-指令：「打開零食櫃」或「打開櫥櫃」"><a href="#2-指令：「打開零食櫃」或「打開櫥櫃」" class="headerlink" title="2. 指令：「打開零食櫃」或「打開櫥櫃」"></a>2. 指令：「打開零食櫃」或「打開櫥櫃」</h3><p>新增零食櫃或櫥櫃裡的東西，輸入模式是以<code>空行</code>新增多個物品。若未輸入，則有效期限則預設七天後過期；若未輸入，數量則預設為1個。</p>
+<h3 id="2-指令：「打開零食櫃」或「打開櫥櫃」"><a href="#2-指令：「打開零食櫃」或「打開櫥櫃」" class="headerlink" title="2. 指令：「打開零食櫃」或「打開櫥櫃」"></a>2. 指令：「打開零食櫃」或「打開櫥櫃」</h3><p>新增零食櫃或櫥櫃裡的東西，輸入模式是以<code>空行</code>新增多個物品。若未輸入，則有效期限預設七天後過期，數量預設為1個。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"># 物品 數量 日期</span><br><span class="line"># 物品 數量 (可省略日期)</span><br><span class="line"># 物品 (可省略數量) 日期</span><br><span class="line"># 物品 (可省略數量) (可省略日期)</span><br><span class="line"></span><br><span class="line">打開零食櫃</span><br><span class="line">小吉飼料 1 2024/08/31</span><br><span class="line">小吉潔牙骨 2</span><br><span class="line">小吉餅乾 2024/08/31</span><br><span class="line">小吉餅乾</span><br></pre></td></tr></table></figure>
 <ul>
 <li>動作：將紀錄寫入firebase中<ul>
@@ -292,21 +293,15 @@
 </ul>
 </li>
 </ul>
-<h3 id="3-指令：「清空所有零食櫃」或「清空所有櫥櫃」"><a href="#3-指令：「清空所有零食櫃」或「清空所有櫥櫃」" class="headerlink" title="3. 指令：「清空所有零食櫃」或「清空所有櫥櫃」"></a>3. 指令：「清空所有零食櫃」或「清空所有櫥櫃」</h3><ul>
+<h3 id="3-指令：「清空零食櫃」或「清空櫥櫃」"><a href="#3-指令：「清空零食櫃」或「清空櫥櫃」" class="headerlink" title="3. 指令：「清空零食櫃」或「清空櫥櫃」"></a>3. 指令：「清空零食櫃」或「清空櫥櫃」</h3><ul>
 <li>動作：根據使用者指示「零食櫃」或「櫥櫃」，清除在firebase上的所有資料。<ul>
 <li>回覆：好了！</li>
 </ul>
 </li>
 </ul>
-<h3 id="4-指令：「清空過期零食櫃」或「清空過期櫥櫃」"><a href="#4-指令：「清空過期零食櫃」或「清空過期櫥櫃」" class="headerlink" title="4. 指令：「清空過期零食櫃」或「清空過期櫥櫃」"></a>4. 指令：「清空過期零食櫃」或「清空過期櫥櫃」</h3><ul>
-<li>動作：根據使用者指示「零食櫃」或「櫥櫃」，清除在firebase上的過期資料，即有效期限在今天以前的資料。<ul>
-<li>回覆：好了！</li>
-</ul>
-</li>
-</ul>
-<h3 id="5-指令：「清理零食櫃」或「清理櫥櫃」"><a href="#5-指令：「清理零食櫃」或「清理櫥櫃」" class="headerlink" title="5. 指令：「清理零食櫃」或「清理櫥櫃」"></a>5. 指令：「清理零食櫃」或「清理櫥櫃」</h3><ul>
-<li>動作：根據使用者指示「零食櫃」或「櫥櫃」，清除零食櫃或櫥櫃裡的特定物品，輸入模式是以<code>空行</code>指定多個物品。清除在firebase上的相符資料。<ul>
-<li>回覆：好了！<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">清理零食櫃</span><br><span class="line">小吉飼料</span><br><span class="line">小吉潔牙骨</span><br><span class="line">小吉餅乾</span><br></pre></td></tr></table></figure></li>
+<h3 id="4-指令：「整理零食櫃」或「整理櫥櫃」"><a href="#4-指令：「整理零食櫃」或「整理櫥櫃」" class="headerlink" title="4. 指令：「整理零食櫃」或「整理櫥櫃」"></a>4. 指令：「整理零食櫃」或「整理櫥櫃」</h3><ul>
+<li>動作：根據使用者指示「零食櫃」或「櫥櫃」，預設為清除在firebase上的過期資料，即有效期限在今天以前的資料；若有以<code>空行</code>指定多個物品，則清除在firebase上的相符資料。<ul>
+<li>回覆：好了！<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">整理零食櫃</span><br><span class="line">小吉飼料</span><br><span class="line">小吉潔牙骨</span><br><span class="line">小吉餅乾</span><br></pre></td></tr></table></figure></li>
 </ul>
 </li>
 </ul>
@@ -332,6 +327,9 @@
     
 
       <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/chatbot/" rel="tag"># chatbot</a>
+          </div>
 
         
 
@@ -401,7 +399,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%96%8B%E7%99%BC%E5%9C%B0%E5%9C%96"><span class="nav-number">2.</span> <span class="nav-text">開發地圖</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8A%A0%E5%85%A5%E5%A5%BD%E5%8F%8B%E7%9A%84%E7%95%AB%E9%9D%A2"><span class="nav-number">3.</span> <span class="nav-text">加入好友的畫面</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%91%BC%E5%8F%AB%E6%8C%87%E4%BB%A4%E9%81%B8%E5%96%AE%E3%80%8C%E6%88%91%E8%A6%81%E9%A0%98%E9%A4%8A%E5%B0%8F%E5%90%89%E3%80%8D"><span class="nav-number">4.</span> <span class="nav-text">呼叫指令選單「我要領養小吉」</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%85%A7%E9%A1%A7%E4%B8%A6%E8%A8%98%E9%8C%84%E5%B0%8F%E5%90%89%E7%94%9F%E6%B4%BB"><span class="nav-number">5.</span> <span class="nav-text">照顧並記錄小吉生活</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E6%8C%87%E4%BB%A4%EF%BC%9A%E3%80%8C%E5%B0%8F%E5%90%89OO%E3%80%8D"><span class="nav-number">5.1.</span> <span class="nav-text">1. 指令：「小吉ＯＯ」</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E6%8C%87%E4%BB%A4%EF%BC%9A%E3%80%8C%E6%9C%80%E8%BF%91%E6%80%8E%E9%BA%BC%E6%A8%A3%E3%80%8D%E6%88%96%E3%80%8C%E6%91%B8%E6%91%B8%E3%80%8D"><span class="nav-number">5.2.</span> <span class="nav-text">2. 指令：「最近怎麼樣」或「摸摸」</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AB%8B%E5%B0%8F%E5%90%89%E5%B9%AB%E5%BF%99%E6%95%B4%E7%90%86%E6%AB%83%E5%AD%90"><span class="nav-number">6.</span> <span class="nav-text">請小吉幫忙整理櫃子</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E6%8C%87%E4%BB%A4%EF%BC%9A%E3%80%8C%E5%B0%8F%E5%90%89%E7%9C%8B%E7%9C%8B%E9%9B%B6%E9%A3%9F%E6%AB%83%E3%80%8D%E6%88%96%E3%80%8C%E5%B0%8F%E5%90%89%E7%9C%8B%E7%9C%8B%E6%AB%A5%E6%AB%83%E3%80%8D"><span class="nav-number">6.1.</span> <span class="nav-text">1. 指令：「小吉看看零食櫃」或「小吉看看櫥櫃」</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E6%8C%87%E4%BB%A4%EF%BC%9A%E3%80%8C%E6%89%93%E9%96%8B%E9%9B%B6%E9%A3%9F%E6%AB%83%E3%80%8D%E6%88%96%E3%80%8C%E6%89%93%E9%96%8B%E6%AB%A5%E6%AB%83%E3%80%8D"><span class="nav-number">6.2.</span> <span class="nav-text">2. 指令：「打開零食櫃」或「打開櫥櫃」</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E6%8C%87%E4%BB%A4%EF%BC%9A%E3%80%8C%E6%B8%85%E7%A9%BA%E6%89%80%E6%9C%89%E9%9B%B6%E9%A3%9F%E6%AB%83%E3%80%8D%E6%88%96%E3%80%8C%E6%B8%85%E7%A9%BA%E6%89%80%E6%9C%89%E6%AB%A5%E6%AB%83%E3%80%8D"><span class="nav-number">6.3.</span> <span class="nav-text">3. 指令：「清空所有零食櫃」或「清空所有櫥櫃」</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-%E6%8C%87%E4%BB%A4%EF%BC%9A%E3%80%8C%E6%B8%85%E7%A9%BA%E9%81%8E%E6%9C%9F%E9%9B%B6%E9%A3%9F%E6%AB%83%E3%80%8D%E6%88%96%E3%80%8C%E6%B8%85%E7%A9%BA%E9%81%8E%E6%9C%9F%E6%AB%A5%E6%AB%83%E3%80%8D"><span class="nav-number">6.4.</span> <span class="nav-text">4. 指令：「清空過期零食櫃」或「清空過期櫥櫃」</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-%E6%8C%87%E4%BB%A4%EF%BC%9A%E3%80%8C%E6%B8%85%E7%90%86%E9%9B%B6%E9%A3%9F%E6%AB%83%E3%80%8D%E6%88%96%E3%80%8C%E6%B8%85%E7%90%86%E6%AB%A5%E6%AB%83%E3%80%8D"><span class="nav-number">6.5.</span> <span class="nav-text">5. 指令：「清理零食櫃」或「清理櫥櫃」</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%94%BE%E7%94%9F%E5%B0%8F%E5%90%89"><span class="nav-number">7.</span> <span class="nav-text">放生小吉</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E9%81%B8%E9%A0%85%EF%BC%9A%E6%94%BE%E7%94%9F%E7%89%A0"><span class="nav-number">7.1.</span> <span class="nav-text">1. 選項：放生牠</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E9%81%B8%E9%A0%85%EF%BC%9A%E5%B8%B6%E5%9B%9E%E5%AE%B6"><span class="nav-number">7.2.</span> <span class="nav-text">2. 選項：帶回家</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%96%8B%E7%99%BC%E5%9C%B0%E5%9C%96"><span class="nav-number">2.</span> <span class="nav-text">開發地圖</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8A%A0%E5%85%A5%E5%A5%BD%E5%8F%8B%E7%9A%84%E7%95%AB%E9%9D%A2"><span class="nav-number">3.</span> <span class="nav-text">加入好友的畫面</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%91%BC%E5%8F%AB%E6%8C%87%E4%BB%A4%E9%81%B8%E5%96%AE%E3%80%8C%E6%88%91%E8%A6%81%E9%A0%98%E9%A4%8A%E5%B0%8F%E5%90%89%E3%80%8D"><span class="nav-number">4.</span> <span class="nav-text">呼叫指令選單「我要領養小吉」</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%85%A7%E9%A1%A7%E4%B8%A6%E8%A8%98%E9%8C%84%E5%B0%8F%E5%90%89%E7%94%9F%E6%B4%BB"><span class="nav-number">5.</span> <span class="nav-text">照顧並記錄小吉生活</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E6%8C%87%E4%BB%A4%EF%BC%9A%E3%80%8C%E5%B0%8F%E5%90%89OO%E3%80%8D"><span class="nav-number">5.1.</span> <span class="nav-text">1. 指令：「小吉ＯＯ」</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E6%8C%87%E4%BB%A4%EF%BC%9A%E3%80%8C%E6%9C%80%E8%BF%91%E6%80%8E%E9%BA%BC%E6%A8%A3%E3%80%8D%E6%88%96%E3%80%8C%E6%91%B8%E6%91%B8%E3%80%8D"><span class="nav-number">5.2.</span> <span class="nav-text">2. 指令：「最近怎麼樣」或「摸摸」</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AB%8B%E5%B0%8F%E5%90%89%E5%B9%AB%E5%BF%99%E6%95%B4%E7%90%86%E6%AB%83%E5%AD%90"><span class="nav-number">6.</span> <span class="nav-text">請小吉幫忙整理櫃子</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E6%8C%87%E4%BB%A4%EF%BC%9A%E3%80%8C%E5%B0%8F%E5%90%89%E7%9C%8B%E7%9C%8B%E9%9B%B6%E9%A3%9F%E6%AB%83%E3%80%8D%E6%88%96%E3%80%8C%E5%B0%8F%E5%90%89%E7%9C%8B%E7%9C%8B%E6%AB%A5%E6%AB%83%E3%80%8D"><span class="nav-number">6.1.</span> <span class="nav-text">1. 指令：「小吉看看零食櫃」或「小吉看看櫥櫃」</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E6%8C%87%E4%BB%A4%EF%BC%9A%E3%80%8C%E6%89%93%E9%96%8B%E9%9B%B6%E9%A3%9F%E6%AB%83%E3%80%8D%E6%88%96%E3%80%8C%E6%89%93%E9%96%8B%E6%AB%A5%E6%AB%83%E3%80%8D"><span class="nav-number">6.2.</span> <span class="nav-text">2. 指令：「打開零食櫃」或「打開櫥櫃」</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E6%8C%87%E4%BB%A4%EF%BC%9A%E3%80%8C%E6%B8%85%E7%A9%BA%E9%9B%B6%E9%A3%9F%E6%AB%83%E3%80%8D%E6%88%96%E3%80%8C%E6%B8%85%E7%A9%BA%E6%AB%A5%E6%AB%83%E3%80%8D"><span class="nav-number">6.3.</span> <span class="nav-text">3. 指令：「清空零食櫃」或「清空櫥櫃」</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-%E6%8C%87%E4%BB%A4%EF%BC%9A%E3%80%8C%E6%95%B4%E7%90%86%E9%9B%B6%E9%A3%9F%E6%AB%83%E3%80%8D%E6%88%96%E3%80%8C%E6%95%B4%E7%90%86%E6%AB%A5%E6%AB%83%E3%80%8D"><span class="nav-number">6.4.</span> <span class="nav-text">4. 指令：「整理零食櫃」或「整理櫥櫃」</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%94%BE%E7%94%9F%E5%B0%8F%E5%90%89"><span class="nav-number">7.</span> <span class="nav-text">放生小吉</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E9%81%B8%E9%A0%85%EF%BC%9A%E6%94%BE%E7%94%9F%E7%89%A0"><span class="nav-number">7.1.</span> <span class="nav-text">1. 選項：放生牠</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E9%81%B8%E9%A0%85%EF%BC%9A%E5%B8%B6%E5%9B%9E%E5%AE%B6"><span class="nav-number">7.2.</span> <span class="nav-text">2. 選項：帶回家</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -418,6 +416,10 @@
           <span class="site-state-item-count">2</span>
           <span class="site-state-item-name">المقالات</span>
         </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">الوسوم</span>
       </div>
   </nav>
 </div>

@@ -176,7 +176,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">عُدل في</span>
-                <time title="عُدل: 2024-08-22 14:41:20" itemprop="dateModified" datetime="2024-08-22T14:41:20+08:00">2024-08-22</time>
+                <time title="عُدل: 2024-08-23 15:52:01" itemprop="dateModified" datetime="2024-08-23T15:52:01+08:00">2024-08-23</time>
               </span>
 
           
@@ -242,7 +242,7 @@
 </tr>
 </thead>
 <tbody><tr>
-<td><img src="https://hackmd.io/_uploads/SJetAB4jC.png" alt="image"></td>
+<td><img src="https://hackmd.io/_uploads/BJ3dA3SjA.png" alt="image"></td>
 <td><img src="https://hackmd.io/_uploads/Sk5j0r4j0.png" alt="image"></td>
 </tr>
 </tbody></table>
@@ -263,13 +263,13 @@
 </tr>
 </thead>
 <tbody><tr>
-<td><img src="https://hackmd.io/_uploads/r17p1IVsA.png" alt="image"> <img src="https://hackmd.io/_uploads/BJBUz8VoA.png" alt="image"></td>
+<td><img src="https://hackmd.io/_uploads/rk1p02BoA.png" alt="image"> <img src="https://hackmd.io/_uploads/S1d0C3Hj0.png" alt="image"></td>
 <td><img src="https://hackmd.io/_uploads/B1FL1L4i0.png" alt="image"></td>
 </tr>
 </tbody></table>
 </li>
 </ul>
-<h3 id="2-指令：「打開零食櫃」或「打開櫥櫃」"><a href="#2-指令：「打開零食櫃」或「打開櫥櫃」" class="headerlink" title="2. 指令：「打開零食櫃」或「打開櫥櫃」"></a>2. 指令：「打開零食櫃」或「打開櫥櫃」</h3><p>新增零食櫃或櫥櫃裡的東西，輸入模式是以<code>空行</code>新增多個物品。若未輸入，則有效期限則預設七天後過期；若未輸入，數量則預設為1個。</p>
+<h3 id="2-指令：「打開零食櫃」或「打開櫥櫃」"><a href="#2-指令：「打開零食櫃」或「打開櫥櫃」" class="headerlink" title="2. 指令：「打開零食櫃」或「打開櫥櫃」"></a>2. 指令：「打開零食櫃」或「打開櫥櫃」</h3><p>新增零食櫃或櫥櫃裡的東西，輸入模式是以<code>空行</code>新增多個物品。若未輸入，則有效期限預設七天後過期，數量預設為1個。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"># 物品 數量 日期</span><br><span class="line"># 物品 數量 (可省略日期)</span><br><span class="line"># 物品 (可省略數量) 日期</span><br><span class="line"># 物品 (可省略數量) (可省略日期)</span><br><span class="line"></span><br><span class="line">打開零食櫃</span><br><span class="line">小吉飼料 1 2024/08/31</span><br><span class="line">小吉潔牙骨 2</span><br><span class="line">小吉餅乾 2024/08/31</span><br><span class="line">小吉餅乾</span><br></pre></td></tr></table></figure>
 <ul>
 <li>動作：將紀錄寫入firebase中<ul>
@@ -277,21 +277,15 @@
 </ul>
 </li>
 </ul>
-<h3 id="3-指令：「清空所有零食櫃」或「清空所有櫥櫃」"><a href="#3-指令：「清空所有零食櫃」或「清空所有櫥櫃」" class="headerlink" title="3. 指令：「清空所有零食櫃」或「清空所有櫥櫃」"></a>3. 指令：「清空所有零食櫃」或「清空所有櫥櫃」</h3><ul>
+<h3 id="3-指令：「清空零食櫃」或「清空櫥櫃」"><a href="#3-指令：「清空零食櫃」或「清空櫥櫃」" class="headerlink" title="3. 指令：「清空零食櫃」或「清空櫥櫃」"></a>3. 指令：「清空零食櫃」或「清空櫥櫃」</h3><ul>
 <li>動作：根據使用者指示「零食櫃」或「櫥櫃」，清除在firebase上的所有資料。<ul>
 <li>回覆：好了！</li>
 </ul>
 </li>
 </ul>
-<h3 id="4-指令：「清空過期零食櫃」或「清空過期櫥櫃」"><a href="#4-指令：「清空過期零食櫃」或「清空過期櫥櫃」" class="headerlink" title="4. 指令：「清空過期零食櫃」或「清空過期櫥櫃」"></a>4. 指令：「清空過期零食櫃」或「清空過期櫥櫃」</h3><ul>
-<li>動作：根據使用者指示「零食櫃」或「櫥櫃」，清除在firebase上的過期資料，即有效期限在今天以前的資料。<ul>
-<li>回覆：好了！</li>
-</ul>
-</li>
-</ul>
-<h3 id="5-指令：「清理零食櫃」或「清理櫥櫃」"><a href="#5-指令：「清理零食櫃」或「清理櫥櫃」" class="headerlink" title="5. 指令：「清理零食櫃」或「清理櫥櫃」"></a>5. 指令：「清理零食櫃」或「清理櫥櫃」</h3><ul>
-<li>動作：根據使用者指示「零食櫃」或「櫥櫃」，清除零食櫃或櫥櫃裡的特定物品，輸入模式是以<code>空行</code>指定多個物品。清除在firebase上的相符資料。<ul>
-<li>回覆：好了！<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">清理零食櫃</span><br><span class="line">小吉飼料</span><br><span class="line">小吉潔牙骨</span><br><span class="line">小吉餅乾</span><br></pre></td></tr></table></figure></li>
+<h3 id="4-指令：「整理零食櫃」或「整理櫥櫃」"><a href="#4-指令：「整理零食櫃」或「整理櫥櫃」" class="headerlink" title="4. 指令：「整理零食櫃」或「整理櫥櫃」"></a>4. 指令：「整理零食櫃」或「整理櫥櫃」</h3><ul>
+<li>動作：根據使用者指示「零食櫃」或「櫥櫃」，預設為清除在firebase上的過期資料，即有效期限在今天以前的資料；若有以<code>空行</code>指定多個物品，則清除在firebase上的相符資料。<ul>
+<li>回覆：好了！<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">整理零食櫃</span><br><span class="line">小吉飼料</span><br><span class="line">小吉潔牙骨</span><br><span class="line">小吉餅乾</span><br></pre></td></tr></table></figure></li>
 </ul>
 </li>
 </ul>
@@ -463,6 +457,10 @@
           <span class="site-state-item-count">2</span>
           <span class="site-state-item-name">المقالات</span>
         </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">الوسوم</span>
       </div>
   </nav>
 </div>
